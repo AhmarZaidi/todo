@@ -105,7 +105,8 @@ body {
 }
 
 .item-list-container {
-	max-height: 318.5px;
+	/* max-height: 318.5px; */
+	height: 318.5px;
 	overflow: auto;
 
 	scrollbar-width: thin;
