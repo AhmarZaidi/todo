@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# React Todo App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a simple Todo application built with just React. It allows users to manage their tasks efficiently.
 
-## Available Scripts
+Start using it [here](https://todo-wheat-xi.vercel.app/).
 
-In the project directory, you can run:
+## Function
 
-### `npm start`
+This React Todo App is a single-page application that provides the core functionalities of a Todo list. Users can add, mark as complete, and delete tasks. 
+The application is built using React.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Details
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### Architecture
+The application structure is based on the principles of component-based architecture. This approach promotes code reusability, separation of concerns, and easier maintenance by breaking down the application into self-contained components.
 
-### `npm test`
+#### Features
+Users can add, remove, or edit list items within the application. This functionality allows for dynamic manipulation of data.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### Local Storage
+Data is stored locally on the user's browser using the browser's local storage mechanism `Local Storage`. This allows for persistent storage of data even after the user closes the browser or refreshes the page.
 
-### `npm run build`
+### Responsive Design: 
+The application is built with responsiveness in mind, ensuring a seamless user experience across different device sizes. This is achieved through the use of flexible layouts and media queries.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Directory Structure
+```
+.
+├── README.md
+├── package-lock.json
+├── package.json
+├── public
+│   ├── favicon.ico
+│   ├── index.html
+│   ├── logo192.png
+│   ├── logo512.png
+│   ├── manifest.json
+│   ├── robots.txt
+│   └── site-logo.png
+└── src
+    ├── App.css
+    ├── App.js
+    ├── App.test.js
+    ├── assets
+    │   ├── icons
+    │   │   ├── darkmode.svg
+    │   │   ├── delete.svg
+    │   │   ├── edit.svg
+    │   │   └── lightmode.svg
+    │   └── scripts
+    │       └── cursor.js
+    ├── components
+    │   ├── AddItem.jsx
+    │   ├── Checkbox.jsx
+    │   ├── Footer.jsx
+    │   ├── Header.jsx
+    │   ├── Item.jsx
+    │   └── TodoList.jsx
+    ├── index.css
+    ├── index.js
+    ├── logo.svg
+    ├── pages
+    │   ├── About.jsx
+    │   └── Home.jsx
+    ├── reportWebVitals.js
+    └── setupTests.js
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Screenshots 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![big](https://github.com/AhmarZaidi/todo/assets/71930390/7c0f1b61-59e9-4ec1-acc1-4fa10bb2e967)
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![small](https://github.com/AhmarZaidi/todo/assets/71930390/caf208c6-e903-4049-91fb-d5dc17147661)

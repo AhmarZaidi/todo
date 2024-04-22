@@ -4,7 +4,6 @@ import Item from './Item';
 import AddItem from './AddItem';
 
 const TodoList = () => {
-
 	const [items, setItems] = useState([]);
 
 	useEffect(() => {
@@ -21,20 +20,29 @@ const TodoList = () => {
 	}, [items]);
 
 	const handleAddItem = (itemText) => {
-		setItems([...items, { id: items.length + 1, text: itemText, completed: false }]);
+		setItems([
+			...items,
+			{ id: items.length + 1, text: itemText, completed: false },
+		]);
 	};
 
+
+	// eslint-disable-next-line no-unused-vars
 	const handleCompletedToggle = (id, completed) => {
-		const updatedItems = items.map(item => item.id === id ? { ...item, completed: !item.completed } : item);
+		const updatedItems = items.map((item) =>
+			item.id === id ? { ...item, completed: !item.completed } : item
+		);
 		setItems(updatedItems);
 	};
 
 	const handleDeleteItem = (id) => {
-		setItems(items.filter(item => item.id !== id));
+		setItems(items.filter((item) => item.id !== id));
 	};
 
 	const handleEditItem = (id, text) => {
-		const updatedItems = items.map(item => item.id === id ? { ...item, text: text } : item);
+		const updatedItems = items.map((item) =>
+			item.id === id ? { ...item, text } : item
+		);
 		setItems(updatedItems);
 	};
 
@@ -46,20 +54,22 @@ const TodoList = () => {
 	});
 
 	return (
-		<section className='todo-list-container'>
-			<h1 className='todo-title'>Add items to your list...</h1>
-			<h1 className='todo-title-small'>Add items</h1>
-			<hr className='separator' />
-			<div className='items-container'>
-				<div className='item-list-container'>
-					{sortedItems.map(item => (
+		<section className="todo-list-container">
+			<h1 className="todo-title">Add items to your list...</h1>
+			<h1 className="todo-title-small">Add items</h1>
+			<hr className="separator" />
+			<div className="items-container">
+				<div className="item-list-container">
+					{sortedItems.map((item) => (
 						<Item
 							key={item.id}
-							className='item'
+							className="item"
 							itemText={item.text}
 							completed={item.completed}
-							onToggle={completed => handleCompletedToggle(item.id, completed)}
-							onEdit={text => handleEditItem(item.id, text)}
+							onToggle={(completed) =>
+								handleCompletedToggle(item.id, completed)
+							}
+							onEdit={(text) => handleEditItem(item.id, text)}
 							onDelete={() => handleDeleteItem(item.id)}
 						/>
 					))}

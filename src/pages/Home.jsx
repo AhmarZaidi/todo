@@ -9,12 +9,12 @@ const Home = () => {
 	return (
 		<>
 			<Header />
-			<main className='content'>
+			<main className="content">
 				<TodoList />
 			</main>
 			<Footer />
 		</>
 	);
-}
+};
 
 export default Home;
