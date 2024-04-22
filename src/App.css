@@ -1,0 +1,299 @@
+/**
+ * Styles for the Todo App
+ */
+
+:root {
+	--font-nabla: "Nabla", system-ui;
+	--title-font-optical-sizing: auto;
+	--title-font-weight: 400;
+	--title-font-style: normal;
+
+	--color-yellow: #f6c864;
+
+	--color-red: blue;
+	--font-color-light: gray;
+	--font-color-dark: white;
+
+	--todo-list-container-color-dark: #444444;
+
+	--site-bg-color-dark: #1c1c1c;
+
+	--item-button-color: #fff;
+}
+
+body {
+	color: var(--font-color-dark);
+	font-family: monospace;
+	cursor: none;
+}
+
+#invertedcursor {
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	background: var(--color-yellow);
+	border-radius: 50%;
+	top: var(--y, 0);
+	left: var(--x, 0);
+	transform: translate(-50%, -50%);
+	z-index: 3;
+	mix-blend-mode: difference;
+	transition: transform 0.2s;
+	pointer-events: none;
+}
+
+.App {
+	padding: 20px;
+	/* height: 95.2vh; */
+	display: flex;
+	flex-direction: column;
+
+	background-color: var(--site-bg-color-dark);
+}
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #333;
+	border-radius: 10px;
+}
+
+.footer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px;
+	background-color: #333;
+	border-radius: 10px;
+	margin-top: auto;
+}
+
+.site-title {
+	margin: 0 0 0 64px;
+	font-size: 64px;
+	font-family: var(--font-nabla);
+	font-optical-sizing: var(--title-font-optical-sizing);
+	font-weight: var(--title-font-weight);
+	font-style: var(--title-font-style);
+	transition: transform 0.3s ease-in-out;
+}
+
+.site-title:hover {
+	transform: translateY(-10px);
+}
+
+.site-title-footer {
+	margin: 0 0 4px 64px;
+	font-size: 32px;
+	font-family: var(--font-nabla);
+}
+
+.header-right {
+	margin: 0 24px;
+}
+
+.mode-button {
+	width: 20px;
+	height: 26px;
+	fill: var(--item-button-color);
+}
+
+.todo-title-small {
+	display: none;
+}
+
+.item-list-container {
+	max-height: 318.5px;
+	overflow: auto;
+
+	scrollbar-width: thin;
+	scrollbar-color: var(--color-yellow) #f1f1f1;
+}
+
+.content {
+	width: 65%;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 10px;
+	margin: 24px auto;
+
+	background-color: var(--todo-list-container-color-dark);
+}
+
+.todo-list-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 40px 12vw;
+}
+
+.items-container {
+	display: flex;
+	flex-direction: column;
+	width: 36vw;
+}
+
+.item-container {
+	display: flex;
+	justify-content: space-between;
+	border: 1px solid gray;
+	border-radius: 5px;
+	margin: 5px 0;
+	transition: transform 0.3s ease-in-out;
+	transform: scale(0.96);
+}
+
+.add-item-container {
+	margin-top: 5px;
+	padding: 5px 0;
+	transition: transform 0.3s ease-in-out;
+}
+
+.item-container:hover,
+.add-item-container:hover {
+	transform: scale(1);
+	z-index: 2;
+}
+
+.item-label-container {
+	width: 70%;
+	padding: 8px;
+}
+
+.item-label {
+	font-size: 18px;
+	max-width: 100%;
+  	display: flex;
+	overflow: hidden;
+}
+
+.separator {
+	width: 50%;
+}
+
+.item-buttons-container {
+	width: 20%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 8px;
+}
+
+.add-item-input,
+.edit-item-input {
+	padding: 8px;
+	width: 70%;
+	background: none;
+	border: none;
+	color: var(--font-color-dark);
+	font-family: monospace;
+}
+
+.add-item-input:focus,
+.edit-item-input:focus {
+	outline: none;
+}
+
+.edit-item-input {
+	padding: 0;
+	background: none;
+	border: none;
+	color: var(--font-color-dark);
+	font-size: 18px;
+}
+
+.add-item-button {
+	margin: 0 5px;
+	background-color: var(--color-yellow);
+	border: 2px;
+	border-radius: 3px;
+	width: 82px;
+	cursor: none;
+	font-family: monospace;
+}
+
+.add-item-button:hover {
+	background-color: #f5bb40;
+	cursor: none;
+}
+
+.checkbox {
+	width: 20px;
+	height: 20px;
+	margin: 0;
+	background: none;
+	cursor: none;
+}
+
+.checkbox:checked {
+	accent-color: var(--color-yellow);
+}
+
+.item-completed {
+	opacity: 0.4;
+	transition: opacity 0.5s linear;
+	transition: transform 0.3s ease-in-out;
+}
+
+.item-label-completed {
+	text-decoration: line-through;
+}
+
+.item-button {
+	width: 20px;
+	height: 20px;
+	fill: var(--item-button-color);
+}
+
+@media (max-width: 810px) {
+	.item-buttons-container {
+		width: 30%;
+	}
+
+	.item-label-container {
+		width: 60%;
+	}
+}
+
+@media (max-width: 625px) {
+
+	.App {
+		display: flex;
+		justify-content: center;
+	}
+
+	.content {
+		width: 96%;
+	}
+
+	.item-label-container {
+		width: 50%;
+		display: flex;
+		align-items: center;
+	}
+	
+	.item-label {
+		font-size: 14px;
+	}
+
+	.items-container {
+		width: 100%;
+	}
+
+	.site-title-footer {
+		margin: 0;
+	}
+}
+
+@media (max-width: 460px) {
+	.todo-title {
+		display: none;
+	}
+
+	.todo-title-small {
+		display: flex;
+	}
+}
