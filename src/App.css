@@ -71,7 +71,7 @@ body {
 }
 
 .site-title {
-	margin: 0 0 0 64px;
+	margin: auto;
 	font-size: 64px;
 	font-family: var(--font-nabla);
 	font-optical-sizing: var(--title-font-optical-sizing);
@@ -264,6 +264,7 @@ body {
 	.App {
 		display: flex;
 		justify-content: center;
+		height: 100vh;
 	}
 
 	.content {
@@ -296,5 +297,20 @@ body {
 
 	.todo-title-small {
 		display: flex;
+	}
+
+	.footer {
+		display: block;
+	}
+
+	.site-title-footer {
+		text-align: center;
+	}
+
+	.footer-right {
+		display: flex;
+		justify-content: center;
+		margin: 8px 0;
+		font-size: 8px;
 	}
 }
