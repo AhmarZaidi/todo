@@ -1,10 +1,19 @@
 export function setupCursorMovement() {
     function updatePosition(e) {
-        var x = e.clientX || e.touches[0].clientX;
-        var y = e.clientY || e.touches[0].clientY;
+        let x, y;
 
-        document.documentElement.style.setProperty('--x', (x + window.scrollX) + 'px');
-        document.documentElement.style.setProperty('--y', (y + window.scrollY) + 'px');
+        if (e.touches && e.touches.length > 0) {
+            x = e.touches[0].clientX;
+            y = e.touches[0].clientY;
+        } else if (e.clientX && e.clientY) {
+            x = e.clientX;
+            y = e.clientY;
+        }
+
+        if (typeof x === 'number' && typeof y === 'number') {
+            document.documentElement.style.setProperty('--x', (x + window.scrollX) + 'px');
+            document.documentElement.style.setProperty('--y', (y + window.scrollY) + 'px');
+        }
     }
 
     function hideCursor() {
