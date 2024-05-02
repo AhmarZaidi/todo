@@ -23,6 +23,20 @@ Data is stored locally on the user's browser using the browser's local storage m
 ### Responsive Design: 
 The application is built with responsiveness in mind, ensuring a seamless user experience across different device sizes. This is achieved through the use of flexible layouts and media queries.
 
+## Local Environment Setup
+
+To set up this project in your local environment, follow these steps:
+
+1. Clone the repository to your local machine using `git clone https://github.com/AhmarZaidi/todo.git`.
+
+2. Navigate to the project directory with `cd todo`.
+
+3. Install the required dependencies with `npm install`.
+
+4. Start the local development server with `npm start`.
+
+The application will start running on `http://localhost:3000`.
+
 #### Directory Structure
 ```
 .

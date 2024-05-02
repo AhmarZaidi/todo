@@ -24,22 +24,6 @@
 body {
 	color: var(--font-color-dark);
 	font-family: monospace;
-	cursor: none;
-}
-
-#invertedcursor {
-	position: absolute;
-	width: 25px;
-	height: 25px;
-	background: var(--color-yellow);
-	border-radius: 50%;
-	top: var(--y, 0);
-	left: var(--x, 0);
-	transform: translate(-50%, -50%);
-	z-index: 3;
-	mix-blend-mode: difference;
-	transition: transform 0.2s;
-	pointer-events: none;
 }
 
 .App {
@@ -212,13 +196,11 @@ body {
 	border: 2px;
 	border-radius: 3px;
 	width: 82px;
-	cursor: none;
 	font-family: monospace;
 }
 
 .add-item-button:hover {
 	background-color: #f5bb40;
-	cursor: none;
 }
 
 .checkbox {
@@ -226,7 +208,6 @@ body {
 	height: 20px;
 	margin: 0;
 	background: none;
-	cursor: none;
 }
 
 .checkbox:checked {
