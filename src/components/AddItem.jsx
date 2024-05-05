@@ -7,10 +7,23 @@ import { useState } from 'react';
  *
  * @param {Object} props - The properties passed to the component.
  * @param {Function} props.handleAddItem - The function to be called when a new item is added.
+ * @return {JSX.Element} A form for adding a new item to the to-do list.
  */
 const AddItem = ({ handleAddItem }) => {
+    /**
+     * State hook for managing the text of the item to be added.
+     */
     const [itemText, setItemText] = useState('');
 
+    /**
+     * Handles the form submission for adding a new item.
+     * Prevents the default form submission event and calls the handleAddItem function
+     * if itemText is not empty. Resets the itemText state to an empty string after the
+     * item is added.
+     *
+     * @param {React.FormEvent<HTMLFormElement>} e - The event object.
+     * @return {void}
+     */
     const handleSubmit = (e) => {
         e.preventDefault();
         if ('' !== itemText) {
@@ -21,17 +34,17 @@ const AddItem = ({ handleAddItem }) => {
 
     return (
         <form
-            className='item-container add-item-container'
+            className="item-container add-item-container"
             onSubmit={handleSubmit}>
             <input
-                className='add-item-input'
-                type='text'
-                name='addItem'
-                placeholder='Add new tasks in your list'
+                className="add-item-input"
+                type="text"
+                name="addItem"
+                placeholder="Add new tasks in your list"
                 value={itemText}
                 onChange={(e) => setItemText(e.target.value)}
             />
-            <button className='add-item-button' type='submit'>
+            <button className="add-item-button" type="submit">
                 add
             </button>
         </form>

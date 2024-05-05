@@ -6,12 +6,13 @@ import PropTypes from 'prop-types';
  * @param {Object} props - The properties passed to the component.
  * @param {boolean} props.checked - The checked state of the checkbox.
  * @param {Function} props.onClick - The function to be called when the checkbox is clicked.
+ * @return {JSX.Element} A checkbox input element.
  */
 const Checkbox = ({ checked = false, onClick }) => {
     return (
         <input
-            className='checkbox'
-            type='checkbox'
+            className="checkbox"
+            type="checkbox"
             checked={checked}
             onClick={onClick}
             readOnly

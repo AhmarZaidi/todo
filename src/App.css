@@ -2,16 +2,14 @@
  * Styles for the Todo App
  */
 
- :root {
+:root {
     --font-nabla: 'Nabla', system-ui;
     --title-font-optical-sizing: auto;
     --title-font-weight: 400;
     --title-font-style: normal;
-
     --color-red: blue;
     --font-color-light: gray;
     --font-color-dark: white;
-	
     --color-yellow: #f6c864;
     --todo-list-container-color-dark: #444444;
     --site-bg-color-dark: #1c1c1c;
@@ -67,7 +65,7 @@ body {
     margin: 0 0 4px 64px;
     font-size: 32px;
     font-family: var(--font-nabla);
-	transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
 
 .site-title-footer:hover {
@@ -91,7 +89,6 @@ body {
 .item-list-container {
     height: 318.5px;
     overflow: auto;
-
     scrollbar-width: thin;
     scrollbar-color: var(--color-yellow) #f1f1f1;
 }
@@ -103,7 +100,6 @@ body {
     padding: 10px;
     border-radius: 10px;
     margin: 24px auto;
-
     background-color: var(--todo-list-container-color-dark);
 }
 
@@ -196,6 +192,7 @@ body {
     border-radius: 3px;
     width: 82px;
     font-family: monospace;
+    cursor: pointer;
 }
 
 .add-item-button:hover {
@@ -207,10 +204,12 @@ body {
     height: 20px;
     margin: 0;
     background: none;
+    cursor: pointer;
 }
 
 .checkbox:checked {
     accent-color: var(--color-yellow);
+    cursor: pointer;
 }
 
 .item-completed {
@@ -227,6 +226,7 @@ body {
     width: 20px;
     height: 20px;
     fill: var(--item-button-color);
+    cursor: pointer;
 }
 
 @media (max-width: 810px) {
